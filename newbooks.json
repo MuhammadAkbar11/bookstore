@@ -1,0 +1,50 @@
+[
+	{
+		"title": "Harry Potter",
+		"price": "100.000",
+		"images": "dist/image/books/book1.jpg",
+		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star-half-alt'></i> <i class='far fa-star'></i>"
+	},
+	{
+		"title": "Junggle Book",
+		"price": "90.000",
+		"images": "dist/image/books/book3.jpg",
+		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
+	},
+	{
+		"title": "Junggle Book",
+		"price": "90.000",
+		"images": "dist/image/books/book5.jpg",
+		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
+	},
+	{
+		"title": "Junggle Book",
+		"price": "90.000",
+		"images": "dist/image/books/book2.jpg",
+		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
+	},
+	{
+		"title": "Junggle Book",
+		"price": "90.000",
+		"images": "dist/image/books/book4.jpg",
+		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
+	},
+	{
+		"title": "Junggle Book",
+		"price": "90.000",
+		"images": "dist/image/books/book5.jpg",
+		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
+	},
+	{
+		"title": "Junggle Book",
+		"price": "90.000",
+		"images": "dist/image/books/book2.jpg",
+		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
+	},
+	{
+		"title": "Junggle Book",
+		"price": "90.000",
+		"images": "dist/image/books/book3.jpg",
+		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
+	}
+]
