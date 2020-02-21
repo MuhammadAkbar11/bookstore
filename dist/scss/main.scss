@@ -1,0 +1,61 @@
+@import './config';
+@import './navigation';
+
+body {
+	font-family: $poppins;
+	color: set-text-color($text-color);
+}
+
+section {
+	min-height: 450px;
+	color: set-text-color($text-color);
+}
+
+.section__title {
+	position: relative;
+	font-weight: bold !important;
+	font-size: 3rem !important;
+	text-transform: uppercase;
+	margin: 1rem 0;
+
+	&::after {
+		content: '';
+		width: 14%;
+		position: absolute;
+		margin: 0 auto;
+		height: 3px;
+		background: $theme;
+		left: 0;
+		right: 0;
+		bottom: -9px;
+	}
+}
+
+.text-theme {
+	color: $theme !important;
+}
+
+.poppins {
+	font-family: $poppins;
+}
+
+.btn-outline-theme {
+	color: $theme;
+	border-color: $theme-unhover;
+}
+
+.btn-outline-theme:hover {
+	color: #fff;
+	background-color: $theme;
+	border-color: $theme;
+}
+
+.btn-outline-theme:focus,
+.btn-outline-theme.focus {
+	box-shadow: 0 0 0 0.2rem #f341105e;
+}
+.btn-outline-theme:active {
+	box-shadow: 0 0 0 0.2rem #f34110;
+}
+
+@import './home';

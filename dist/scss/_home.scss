@@ -1,0 +1,12 @@
+.hero {
+	background: url('../image/hero.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	object-fit: cover;
+	background-size: cover;
+	height: 120vh;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}

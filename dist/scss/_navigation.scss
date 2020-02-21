@@ -1,0 +1,38 @@
+.navbar {
+	.container {
+		.collapse__theme {
+			.navbar-nav {
+				.nav-item {
+					.nav-link {
+						position: relative;
+						font-size: 1rem;
+						color: $white !important;
+						font-family: $poppins;
+
+						margin-left: 1rem;
+
+						&.nav-link__theme {
+							&::before {
+								content: '';
+								position: absolute;
+								width: 0%;
+								height: 5px;
+								background-color: $theme;
+								bottom: -2px;
+								margin: 0 auto;
+								transition: 0.1s ease-out;
+								border-radius: 5px;
+							}
+
+							&:hover {
+								&::before {
+									width: 80%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

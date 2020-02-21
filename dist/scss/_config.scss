@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code|Poppins&display=swap');
+$theme: #ff4e1b;
+$white: #ffffff;
+$gray: gray;
+$text-color: #0f0f0f;
+$theme-unhover: #cf4f2bd0;
+$poppins: 'Poppins', sans-serif;
+
+@function set-text-color($color) {
+	@if (lightness($color) > 40%) {
+		@return $white;
+	} @else {
+		@return $text-color;
+	}
+}
