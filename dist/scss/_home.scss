@@ -46,3 +46,52 @@
 		}
 	}
 }
+
+.category {
+	margin-top: 10rem !important;
+	color: $text-color;
+	padding-bottom: 5rem;
+
+	.container {
+		object-fit: cover;
+
+		.row > a {
+			padding: 5px !important;
+			height: 340px;
+			position: relative;
+			border: 0.4rem solid $white;
+			overflow: hidden;
+
+			img.card-img-overlay {
+				// position: absolute;
+				padding: 0 !important;
+				position: relative;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+
+			.catg__label {
+				position: absolute;
+				margin: auto auto;
+				left: 0px;
+
+				bottom: 0%;
+				color: $white;
+				text-transform: uppercase;
+				font-family: $poppins;
+				font-size: 0.8rem;
+				opacity: 0;
+				transition: all 0.4s;
+				background: $theme;
+				padding: 2px 5px;
+			}
+
+			&:hover {
+				.catg__label {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
