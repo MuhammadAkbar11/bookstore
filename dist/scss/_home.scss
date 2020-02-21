@@ -199,3 +199,60 @@
 		}
 	}
 }
+
+.newsletter {
+	background: url('../image/newsletter.jpg') center no-repeat;
+	object-fit: cover;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+
+	.row {
+		height: 100%;
+	}
+
+	&__content {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.section__title {
+			font-size: 2.3rem !important;
+
+			&::after {
+				width: 0%;
+			}
+		}
+
+		.newsletter__form {
+			width: 100%;
+			.costum__form {
+				margin-top: 20px;
+				padding: 15px 10px;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row;
+				border-bottom: 2px solid rgb(107, 107, 107);
+				font-size: 1rem;
+
+				.form__input {
+					background: none;
+					outline: none;
+					border: none;
+					color: $white;
+					width: 100%;
+				}
+
+				.btn__subs {
+					background: none;
+					border: none;
+					color: $theme;
+					font-weight: bold;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}
