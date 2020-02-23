@@ -23,9 +23,7 @@
 	<body>
 		<!-- end of navbar -->
 
-		<nav
-			class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent pt-lg-4"
-		>
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light pt-lg-4">
 			<div class="container">
 				<a class="navbar-brand" href="#">
 					<img src="dist/image/logo.png" height="60" alt="" />
@@ -39,10 +37,11 @@
 					aria-expanded="false"
 					aria-label="Toggle navigation"
 				>
-					<span class="navbar-toggler-icon"></span>
+					<span class="navbar-toggler-icon text-theme"></span>
 				</button>
+
 				<div
-					class="collapse navbar-collapse collapse__theme text-lg-center col-lg-10 "
+					class="collapse navbar-collapse collapse__theme text-lg-center col-lg-10 col-md-12"
 					id="navbarNavDropdown"
 				>
 					<ul class="navbar-nav ">
@@ -149,7 +148,7 @@
 				</p>
 
 				<div class="row ">
-					<a href="#" class="col-lg-4 col-md-6 col-sm-6">
+					<a href="#" class="col-lg-4 col-md-6 col-sm-6" title="Education">
 						<img
 							src="dist/image/best__kategories/education__2.jpg"
 							alt=""
@@ -405,6 +404,32 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- Modal -->
+		<div
+			class="modal fade bd-example-modal-lg"
+			id="newBookModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="newBookModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body pt-0"></div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->

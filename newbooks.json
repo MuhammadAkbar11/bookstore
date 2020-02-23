@@ -1,50 +1,82 @@
 [
 	{
+		"id": "1",
 		"title": "Harry Potter",
 		"price": "100.000",
 		"images": "dist/image/books/book1.jpg",
+		"year": "2018",
+		"writter": "Witter name",
+		"publisher": "publisher",
 		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star-half-alt'></i> <i class='far fa-star'></i>"
 	},
 	{
+		"id": "2",
 		"title": "Junggle Book",
 		"price": "90.000",
+		"year": "2020",
+		"writter": "Witter name",
+		"publisher": "publisher name",
 		"images": "dist/image/books/book3.jpg",
 		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
 	},
 	{
+		"id": "3",
 		"title": "Junggle Book",
 		"price": "90.000",
 		"images": "dist/image/books/book5.jpg",
+		"year": "2018",
+		"writter": "Witter name",
+		"publisher": "publisher",
 		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
 	},
 	{
+		"id": "4",
 		"title": "Junggle Book",
 		"price": "90.000",
 		"images": "dist/image/books/book2.jpg",
+		"year": "2018",
+		"writter": "Witter name",
+		"publisher": "publisher",
 		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
 	},
 	{
+		"id": "5",
 		"title": "Junggle Book",
 		"price": "90.000",
 		"images": "dist/image/books/book4.jpg",
+		"year": "2019",
+		"writter": "Witter name",
+		"publisher": "publisher",
 		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
 	},
 	{
+		"id": "6",
 		"title": "Junggle Book",
 		"price": "90.000",
 		"images": "dist/image/books/book5.jpg",
+		"year": "2019",
+		"writter": "Witter name",
+		"publisher": "publisher",
 		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
 	},
 	{
+		"id": "7",
 		"title": "Junggle Book",
 		"price": "90.000",
 		"images": "dist/image/books/book2.jpg",
+		"year": "2015",
+		"writter": "Witter name",
+		"publisher": "publisher",
 		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
 	},
 	{
+		"id": "8",
 		"title": "Junggle Book",
 		"price": "90.000",
 		"images": "dist/image/books/book3.jpg",
+		"year": "2020",
+		"writter": "Witter name",
+		"publisher": "publisher",
 		"rating": "<i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='fas fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i>"
 	}
 ]

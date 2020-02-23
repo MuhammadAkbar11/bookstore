@@ -136,20 +136,27 @@
 					transition: all 0.1s ease-in-out;
 
 					.icon__actions {
-						width: 80%;
+						width: 100%;
 						margin: 0 auto;
 						position: relative;
 						font-size: 1.2rem;
-						display: flex;
-						justify-content: center;
+						// display: flex;
+						// justify-content: center;
+						display: grid;
+						grid-template-columns: auto auto;
 						.actions__item {
-							border-radius: 50%;
-							padding: 8px 10px !important;
 							color: $theme;
 							transition: all 0.3s ease-in-out;
 							transform: translateY(20px);
 							opacity: 0;
 							margin-left: 7px;
+							font-size: 1rem;
+							display: inline-block;
+							padding: 4px 10px;
+							text-decoration: none;
+							i {
+								z-index: -1;
+							}
 
 							&:hover {
 								background-color: $theme;

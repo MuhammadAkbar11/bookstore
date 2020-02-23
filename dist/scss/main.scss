@@ -6,6 +6,10 @@ body {
 	color: set-text-color($text-color);
 }
 
+.tex {
+	border: 2px solid lightblue;
+}
+
 section {
 	min-height: 450px;
 	color: set-text-color($text-color);
@@ -42,20 +46,44 @@ section {
 .btn-outline-theme {
 	color: $theme;
 	border-color: $theme-unhover;
+
+	&:hover {
+		color: #fff;
+		background-color: $theme;
+		border-color: $theme;
+	}
+
+	&:focus,
+	&.focus {
+		box-shadow: 0 0 0 0.2rem #f341105e;
+	}
+
+	&:active {
+		box-shadow: 0 0 0 0.2rem #f34110;
+	}
 }
 
-.btn-outline-theme:hover {
+.btn-theme {
 	color: #fff;
 	background-color: $theme;
 	border-color: $theme;
-}
 
-.btn-outline-theme:focus,
-.btn-outline-theme.focus {
-	box-shadow: 0 0 0 0.2rem #f341105e;
-}
-.btn-outline-theme:active {
-	box-shadow: 0 0 0 0.2rem #f34110;
+	&:hover {
+		color: #fff;
+		background-color: $theme-unhover;
+		border-color: $theme;
+	}
+
+	&.focus,
+	&:focus {
+		box-shadow: 0 0 0 0.2rem #f341105e;
+	}
+
+	&:disabled {
+		color: #fff;
+		background-color: #f34110;
+		border-color: #f34110;
+	}
 }
 
 @import 'home';
