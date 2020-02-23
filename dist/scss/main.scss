@@ -1,13 +1,10 @@
 @import './config';
 @import './navigation';
 
-body {
+body,
+html {
 	font-family: $poppins;
 	color: set-text-color($text-color);
-}
-
-.tex {
-	border: 2px solid lightblue;
 }
 
 section {
@@ -83,6 +80,27 @@ section {
 		color: #fff;
 		background-color: #f34110;
 		border-color: #f34110;
+	}
+}
+
+.btn-scrool__top {
+	position: fixed;
+	z-index: 2000;
+	bottom: 2rem;
+	right: 2rem;
+	background-color: $theme;
+	color: $white;
+	padding: 0.45rem 0.75rem;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+
+	&.hide {
+		transform: scale(0) translateY(-5rem);
+	}
+
+	&:hover {
+		background-color: $theme-unhover;
+		color: $white;
 	}
 }
 

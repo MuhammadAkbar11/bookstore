@@ -71,8 +71,8 @@ function showbooks({ images, title, price, id, rating }) {
 }
 
 document.addEventListener('click', async function(e) {
-	e.preventDefault();
 	if (e.target.classList.contains('btn-detail-books')) {
+		e.preventDefault();
 		try {
 			const id = e.target.dataset.id;
 			const books = await getBooks();
@@ -142,16 +142,24 @@ window.addEventListener('scroll', function(e) {
 	const navbar = this.document.querySelector('.navbar');
 
 	const winPos = window.pageYOffset;
-
-	//if (winPos >= 100) {
-	// 	navbar.style.cssText = `top: -300px`
-	// }
-
 	if (winPos >= document.querySelector('.about').offsetTop - 20) {
 		navbar.classList.add('bg-dark');
 		navbar.classList.remove('pt-lg-4');
+		document.querySelector('.btn-scrool__top').classList.remove('hide');
 	} else {
 		navbar.classList.remove('bg-dark');
 		navbar.classList.add('pt-lg-4');
+		document.querySelector('.btn-scrool__top').classList.add('hide');
 	}
 });
+
+document.querySelector('.btn-scrool__top').addEventListener('click', e => {
+	e.preventDefault();
+	window.scrollTo({
+		top: 0,
+		left: 100,
+		behavior: 'smooth'
+	});
+});
+
+// animate landing
