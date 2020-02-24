@@ -163,3 +163,22 @@ document.querySelector('.btn-scrool__top').addEventListener('click', e => {
 });
 
 // animate landing
+
+document.addEventListener('DOMContentLoaded', function() {
+	setTimeout(() => {
+		document.querySelector('.navbar').classList.add('navbar--landing');
+	}, 300);
+
+	setTimeout(() => {
+		heroTitleAnimation();
+	}, 1000);
+});
+
+function heroTitleAnimation() {
+	[...document.querySelectorAll('.node-title')].map((i, s) => {
+		setTimeout(() => {
+			i.classList.add('landing');
+		}, 300 * (s + 1));
+	});
+	console.log(heroTitle);
+}

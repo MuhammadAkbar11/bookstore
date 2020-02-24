@@ -9,6 +9,29 @@
 	display: flex;
 	align-items: center;
 	overflow: hidden;
+
+	.hero__title {
+		display: flex;
+		justify-content: center;
+
+		.node-title-left {
+			transform: translateX(-10rem);
+			opacity: 0;
+			transition: 0.2s;
+		}
+		.node-title-right {
+			opacity: 0;
+			transform: translateX(10rem);
+			transition: 0.2s;
+		}
+
+		.node-title-left.landing,
+		.node-title-right.landing {
+			transition: 0.4s ease-in-out;
+			opacity: 1;
+			transform: translateX(0rem);
+		}
+	}
 }
 
 .about {
