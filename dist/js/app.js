@@ -33,7 +33,7 @@ function loadBooks(books) {
 function showbooks({ images, title, price, id, rating }) {
 	return `
 		<div class="col-sm-6 col-md-6 col-lg-3 mb-sm-3">
-			<div class="card  position-relative p-0">
+			<div class="card card-book position-relative p-0">
 				<img src="${images}" class="card-img-top shadow rounded-top" />
 				<div class="card-body text-center">
 					<h5 class="card-title text-dark">${title}</h5>
@@ -138,21 +138,6 @@ function showBookDetails(book) {
 	`;
 }
 
-window.addEventListener('scroll', function(e) {
-	const navbar = this.document.querySelector('.navbar');
-
-	const winPos = window.pageYOffset;
-	if (winPos >= document.querySelector('.about').offsetTop - 20) {
-		navbar.classList.add('bg-dark');
-		navbar.classList.remove('pt-lg-4');
-		document.querySelector('.btn-scrool__top').classList.remove('hide');
-	} else {
-		navbar.classList.remove('bg-dark');
-		navbar.classList.add('pt-lg-4');
-		document.querySelector('.btn-scrool__top').classList.add('hide');
-	}
-});
-
 document.querySelector('.btn-scrool__top').addEventListener('click', e => {
 	e.preventDefault();
 	window.scrollTo({
@@ -162,17 +147,7 @@ document.querySelector('.btn-scrool__top').addEventListener('click', e => {
 	});
 });
 
-// animate landing
-
-document.addEventListener('DOMContentLoaded', function() {
-	setTimeout(() => {
-		document.querySelector('.navbar').classList.add('navbar--landing');
-	}, 300);
-
-	setTimeout(() => {
-		heroTitleAnimation();
-	}, 1000);
-});
+// landing Element
 
 function heroTitleAnimation() {
 	[...document.querySelectorAll('.node-title')].map((i, s) => {
@@ -180,5 +155,103 @@ function heroTitleAnimation() {
 			i.classList.add('landing');
 		}, 300 * (s + 1));
 	});
-	console.log(heroTitle);
+
+	setTimeout(() => {
+		document.querySelector('.hero__subtitle').classList.add('landing');
+	}, 1500);
 }
+
+const AddClassElement = function(element, newClass) {
+	this.element = element;
+	this.newClass = newClass;
+	this.dataWait = 150;
+	this.landing();
+};
+
+AddClassElement.prototype.landing = function() {
+	if (this.element instanceof NodeList) {
+		element = [...this.element];
+		element.map((e, v) => {
+			setTimeout(() => {
+				e.classList.add(this.newClass);
+			}, this.dataWait * (1 + v));
+		});
+	} else {
+		this.dataWait = JSON.parse(this.element.getAttribute('data-wait'));
+		setTimeout(() => {
+			this.element.classList.add(this.newClass);
+		}, this.dataWait);
+	}
+};
+
+function landingElements() {
+	navbar = document.querySelector('.navbar');
+	heroTitle = document.querySelector('.hero__title');
+	heroSubTitle = document.querySelector('.hero__subtitle');
+	btnHero = document.querySelector('.btn-hero');
+	new AddClassElement(navbar, 'navbar--landing');
+	new AddClassElement(heroTitle, 'landing');
+	new AddClassElement(heroSubTitle, 'landing');
+	new AddClassElement(btnHero, 'btn--hero-landing');
+
+	windowsScrollTop();
+}
+
+function windowsScrollTop() {
+	window.addEventListener('scroll', function(e) {
+		const navbar = this.document.querySelector('.navbar');
+		const category = this.document.querySelector('.category');
+		const newProducts = this.document.querySelector('.new__products');
+		const testimonial = this.document.querySelector('.testim');
+		const footer = this.document.querySelector('.footer');
+
+		const winPos = window.pageYOffset;
+
+		if (winPos >= document.querySelector('.about').offsetTop - 20) {
+			navbar.classList.add('bg-dark');
+			navbar.classList.remove('pt-lg-4');
+			document.querySelector('.btn-scrool__top').classList.remove('hide');
+		} else {
+			navbar.classList.remove('bg-dark');
+			navbar.classList.add('pt-lg-4');
+			document.querySelector('.btn-scrool__top').classList.add('hide');
+		}
+
+		if (winPos >= 50) {
+			const aboutContent = document.querySelector('.about__content');
+			new AddClassElement(aboutContent, 'landing');
+			new AddClassElement(
+				document.querySelector('.about__logo'),
+				'logo-landing'
+			);
+		}
+
+		if (winPos >= category.offsetTop - 100) {
+			new AddClassElement(
+				document.querySelectorAll('.kategory__item'),
+				'landing'
+			);
+		}
+
+		if (winPos >= newProducts.offsetTop - 70) {
+			new AddClassElement(
+				this.document.querySelectorAll('.card-book'),
+				'landing'
+			);
+		}
+		if (winPos >= testimonial.offsetTop - 50) {
+			new AddClassElement(
+				this.document.querySelector('.carousel'),
+				'carousel-landing'
+			);
+		}
+		if (winPos >= footer.offsetTop - 200) {
+			new AddClassElement(
+				this.document.querySelectorAll('.footer__icon'),
+				'landing'
+			);
+		}
+	});
+}
+
+document.addEventListener('DOMContentLoaded', landingElements);

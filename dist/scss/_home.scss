@@ -10,26 +10,37 @@
 	align-items: center;
 	overflow: hidden;
 
-	.hero__title {
+	&__title {
 		display: flex;
 		justify-content: center;
+		transform: translateY(1rem);
+		opacity: 0;
+		transition: 0.2s;
 
-		.node-title-left {
-			transform: translateX(-10rem);
-			opacity: 0;
-			transition: 0.2s;
-		}
-		.node-title-right {
-			opacity: 0;
-			transform: translateX(10rem);
-			transition: 0.2s;
-		}
-
-		.node-title-left.landing,
-		.node-title-right.landing {
-			transition: 0.4s ease-in-out;
+		&.landing {
+			transition: 0.3s ease-in-out;
 			opacity: 1;
+			transform: translateY(0rem);
+		}
+	}
+
+	&__subtitle {
+		opacity: 0;
+
+		&.landing {
+			animation: scale_up_in 1s forwards ease-in-out;
+			opacity: 1;
+		}
+	}
+
+	.btn-hero {
+		transition: 0.3s transform ease-in-out;
+		transform: translateY(1.45rem);
+		opacity: 0;
+
+		&.btn--hero-landing {
 			transform: translateX(0rem);
+			opacity: 1;
 		}
 	}
 }
@@ -46,6 +57,7 @@
 	}
 
 	&__box {
+		position: relative;
 		background-color: $white;
 		border-radius: 10px;
 		padding: 10px 20px;
@@ -54,8 +66,29 @@
 	}
 
 	&__logo {
+		transition: all 0.4s ease-in-out;
+		opacity: 0;
+		transform: translateY(2rem);
+
 		.img-fluid {
 			height: 100px;
+		}
+
+		&.logo-landing {
+			transition: all 0.4s ease-in-out;
+			opacity: 1;
+			transform: translateY(0rem);
+		}
+	}
+
+	&__content {
+		transition: all 0.4s ease-in-out;
+		opacity: 0;
+		transform: translateY(2rem);
+
+		&.landing {
+			opacity: 1;
+			transform: translateY(0rem);
 		}
 	}
 
@@ -78,12 +111,21 @@
 	.container {
 		object-fit: cover;
 
-		.row > a {
+		.row > .kategory__item {
 			padding: 5px !important;
 			height: 340px;
 			position: relative;
 			border: 0.4rem solid $white;
 			overflow: hidden;
+			transition: all 0.4s ease-in-out;
+			transform: translateY(2rem);
+			opacity: 0;
+
+			&.landing {
+				transition: all 0.4s ease-in-out;
+				transform: translateY(0rem);
+				opacity: 1;
+			}
 
 			img.card-img-overlay {
 				// position: absolute;
@@ -120,7 +162,7 @@
 }
 
 .new__products {
-	background-color: rgb(247, 247, 247);
+	background-color: rgb(255, 255, 255);
 	margin-top: 10rem !important;
 	display: flex;
 	justify-content: center;
@@ -134,9 +176,18 @@
 	.books__row {
 		margin: 7rem 0 !important ;
 
-		.card {
+		.card-book {
 			background: none;
 			border: unset;
+			transition: 0.4s all ease-in-out;
+			opacity: 0;
+			transform: translateY(2rem);
+
+			&.landing {
+				opacity: 1;
+				transform: translateY(0rem);
+			}
+
 			.card-body {
 				position: relative;
 				overflow: hidden;
@@ -289,6 +340,7 @@
 .testim {
 	color: $text-color;
 	padding: 7rem 0rem 3rem 0rem;
+	padding-bottom: 5rem;
 
 	.col-center {
 		.section__title {
@@ -298,8 +350,16 @@
 		float: none !important;
 
 		.carousel {
+			transition: all 0.4s ease-in-out;
+			opacity: 0;
+			transform: translateY(2rem);
 			margin: 50px auto;
 			padding: 0 70px;
+
+			&.carousel-landing {
+				opacity: 1;
+				transform: translateY(0rem);
+			}
 
 			.item {
 				color: $text-color;

@@ -102,4 +102,14 @@
 			color: #ffffff !important;
 		}
 	}
+
+	&__icon {
+		opacity: 0;
+		transform: translateY(3rem);
+
+		&.landing {
+			opacity: 1;
+			transform: translateY(0rem);
+		}
+	}
 }

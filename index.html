@@ -22,7 +22,7 @@
 	</head>
 	<body id="body">
 		<!-- end of navbar -->
-		<nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-light pt-lg-4">
+		<nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-light pt-lg-4" data-wait="300">
 			<div class="container">
 				<a class="navbar-brand" href="#">
 					<img src="dist/image/logo.png" height="60" alt="" />
@@ -83,35 +83,36 @@
 		<!-- hero Section -->
 		<section class="jumbotron jumbotron-fluid hero">
 			<div class="container text-center">
-				<h1 class="display-4 font-weight-bold text-white hero__title"> 
-					<span class="node-title node-title-left mr-3">Welcome </span> 
-					<span class="text-theme node-title node-title-right "> Quinn </span>
-				</h1>
-				<h3 class="hero__subtitle text-white">
+				<h5 class="text-light hero__title mb-2" data-wait="1000"> 
+					Welcome to Quinn 
+				</h5>
+				<h1 class="display-3 font-weight-bold hero__subtitle text-white" data-wait="2000">
 					<span class="text-theme">Buy </span>your book
+					<br class="d-none d-lg-block" >
 					<span class="text-theme">from </span>Here
-				</h3>
+				</h1>
 				<a
 					href="#"
-					class="btn btn-outline-theme rounded-pill px-md-5 py-md-2 mt-lg-5"
+					class="btn btn-outline-theme rounded-pill px-md-5 py-md-2 mt-2 btn-hero" data-wait="1500"
 					>Buy now
 					<i class="fas fa-arrow-right" style="margin-left: 4px;"></i>
 				</a>
 			</div>
 		</section>
 
-		<!-- about -->
 
+
+		<!-- about -->
 		<section class="about">
 			<div class="container-fluid text-center">
 				<div
 					class="col-md-9 d-flex justify-content-center flex-column shadow-lg p-5 mx-auto about__box"
 				>
 					<div class="row align-items-center">
-						<div class="col-lg-3 col-md-12 about__logo">
+						<div class="col-lg-3 col-md-12 about__logo" data-wait="300">
 							<img class="img-fluid" src="dist/image/logo.png" alt="" />
 						</div>
-						<div class="col-lg-9 col-md-12">
+						<div class="col-lg-9 col-md-12 about__content" data-wait="550">
 							<h4 class="section__title mb-4">
 								<span class="text-theme">About</span>
 								us
@@ -148,7 +149,7 @@
 				</p>
 
 				<div class="row ">
-					<a href="#" class="col-lg-4 col-md-6 col-sm-6" title="Education">
+					<a href="#" class="col-lg-4 col-md-6 col-sm-6 kategory__item" title="Education">
 						<img
 							src="dist/image/best__kategories/education__2.jpg"
 							alt=""
@@ -156,7 +157,7 @@
 						/>
 						<span class="catg__label">Education</span>
 					</a>
-					<a href="#" class="col-lg-5 col-md-6 col-sm-6">
+					<a href="#" class="col-lg-5 col-md-6 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/science.jpg"
 							alt=""
@@ -164,7 +165,7 @@
 						/>
 						<span class="catg__label">science</span>
 					</a>
-					<a href="#" class="col-lg-3 col-md-3 col-sm-6">
+					<a href="#" class="col-lg-3 col-md-3 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/businnes.jpg"
 							alt=""
@@ -172,7 +173,7 @@
 						/>
 						<span class="catg__label">businnes</span>
 					</a>
-					<a href="#" class="col-lg-5 col-md-6 col-sm-6">
+					<a href="#" class="col-lg-5 col-md-6 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/technology.jpg"
 							alt=""
@@ -180,7 +181,7 @@
 						/>
 						<span class="catg__label">Technology</span>
 					</a>
-					<a href="#" class="col-lg-2 col-md-3 col-sm-6">
+					<a href="#" class="col-lg-2 col-md-3 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/romance.jpg"
 							alt=""
@@ -188,7 +189,7 @@
 						/>
 						<span class="catg__label">Romance</span>
 					</a>
-					<a href="#" class="col-lg-5 col-md-12 col-sm-6">
+					<a href="#" class="col-lg-5 col-md-12 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/children.jpg"
 							alt=""
@@ -258,8 +259,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-center m-auto text-center">
-						<h2 class="section__title">testimonial</h2>
-						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<h2 class="section__title">Testimonial</h2>
+						<div id="myCarousel" class="carousel slide" data-ride="carousel" data-wait="400">
 							<!-- Carousel indicators -->
 							<ol class="carousel-indicators">
 								<li
@@ -343,6 +344,7 @@
 
 		<!-- End of Testimonial -->
 
+		<!-- button scroll top -->
 		<a href="#body" class="btn-scrool__top rounded-circle hide">
 			<i class="fas fa-chevron-up fa-2x" ></i>
 		</a>
@@ -396,16 +398,16 @@
 						</h6>
 					</div>
 					<div class="col-sm-5 text-right p-0 footer__icons">
-						<a href="" class="btn-instagram text-white-50">
+						<a href="" class="footer__icon btn-instagram text-white-50" >
 							<i class="fab fa-instagram fa-2x"></i>
 						</a>
-						<a href="" class="btn-facebook text-white-50">
+						<a href="" class="footer__icon btn-facebook text-white-50" >
 							<i class="fab fa-facebook-f fa-2x"></i>
 						</a>
-						<a href="" class="btn-twitter text-white-50">
+						<a href="" class="footer__icon btn-twitter text-white-50" >
 							<i class="fab fa-twitter fa-2x"></i>
 						</a>
-						<a href="" class="btn-linkedin text-white-50">
+						<a href="" class="footer__icon btn-linkedin text-white-50">
 							<i class="fab fa-linkedin-in fa-2x"></i>
 						</a>
 					</div>
