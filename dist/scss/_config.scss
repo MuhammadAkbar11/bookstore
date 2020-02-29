@@ -31,3 +31,33 @@ $poppins: 'Poppins', sans-serif;
 		@content;
 	}
 }
+
+@mixin media-xs {
+	@media (max-width: 575.98px) {
+		@content;
+	}
+}
+
+@mixin media-sm {
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		@content;
+	}
+}
+
+@mixin media-md {
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		@content;
+	}
+}
+
+@mixin media-lg {
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+		@content;
+	}
+}
+
+@mixin media-xl {
+	@media screen and (min-width: 1600px) {
+		@content;
+	}
+}

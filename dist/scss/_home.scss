@@ -13,7 +13,7 @@
 	&__title {
 		display: flex;
 		justify-content: center;
-		transform: translateY(1rem);
+		transform: translateY(3rem);
 		opacity: 0;
 		transition: 0.2s;
 
@@ -26,16 +26,18 @@
 
 	&__subtitle {
 		opacity: 0;
+		font-size: 4.1rem;
+		font-weight: bold;
 
 		&.landing {
-			animation: scale_up_in 1s forwards ease-in-out;
+			animation: scale_up_in 0.6s forwards ease-in-out;
 			opacity: 1;
 		}
 	}
 
 	.btn-hero {
 		transition: 0.3s transform ease-in-out;
-		transform: translateY(1.45rem);
+		transform: translateY(3.45rem);
 		opacity: 0;
 
 		&.btn--hero-landing {
@@ -159,6 +161,20 @@
 			}
 		}
 	}
+}
+
+.service {
+	padding: 5rem 2rem 10rem 2rem;
+	margin-top: 10rem;
+	background: linear-gradient(
+			to right,
+			rgba($text-color, 0.9),
+			rgba($text-color, 0.3)
+		),
+		url('../image/best__kategories/education.jpg') center top;
+	background-size: cover;
+
+	color: $white;
 }
 
 .new__products {

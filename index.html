@@ -22,28 +22,42 @@
 	</head>
 	<body id="body">
 		<!-- end of navbar -->
-		<nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-light pt-lg-4" data-wait="300">
+		<nav
+			id="nav"
+			class="navbar fixed-top navbar-expand-lg navbar-light pt-lg-4"
+			data-wait="300"
+		>
 			<div class="container">
 				<a class="navbar-brand" href="#">
 					<img src="dist/image/logo.png" height="60" alt="" />
 				</a>
-				<button
-					class="navbar-toggler"
-					type="button"
+
+				<div
+					class="col-auto d-flex d-lg-none justify-content-between align-items-center ml-auto mr-2 "
+				>
+					<a href="" class="btn text-white"><i class="fas fa-search"></i></a>
+					<a href="" class="btn text-white ml-2"
+						><i class="fas fa-shopping-bag"></i
+					></a>
+				</div>
+
+				<a
+					class="navbar-toggler border-0 disabled"
+					href="#"
 					data-toggle="collapse"
 					data-target="#navbarNavDropdown"
 					aria-controls="navbarNavDropdown"
 					aria-expanded="false"
 					aria-label="Toggle navigation"
 				>
-					<span class="navbar-toggler-icon text-theme"></span>
-				</button>
+					<span class="navbar-toggler-burger"></span>
+				</a>
 
 				<div
-					class="collapse navbar-collapse collapse__theme text-lg-center col-lg-10 col-md-12"
+					class="collapse navbar-collapse collapse__theme mt-2 mt-lg-2  text-lg-center col-lg-10 "
 					id="navbarNavDropdown"
 				>
-					<ul class="navbar-nav ">
+					<ul class="navbar-nav pb-5 pt-3 p-lg-2">
 						<li class="nav-item ">
 							<a class="nav-link nav-link__theme" href="#">Home </a>
 						</li>
@@ -58,23 +72,19 @@
 						</li>
 						<li class="nav-item">
 							<a
-								class="nav-link nav-link-account btn btn-outline-theme rounded-pill"
+								class="nav-link col-5 col-lg-auto ml-lg-2 mx-auto nav-link-account btn btn-outline-theme rounded-pill"
 								href="#"
 								>My Account</a
 							>
 						</li>
 					</ul>
-					<div class="row float-right ml-auto">
-						<div class="col-sm-5 text-right">
-							<a href="" class="ml-auto btn btn-block text-theme"
-								><i class="fas fa-shopping-bag"></i
-							></a>
-						</div>
-						<div class="col-sm-6 text-left">
-							<a href="" class="btn btn-block text-theme"
-								><i class="fas fa-search"></i
-							></a>
-						</div>
+					<div class="d-none d-lg-inline-flex ml-auto">
+						<a href="" class="btn  my-2 my-sm-0  text-white">
+							Search
+						</a>
+						<a href="#" class="btn  text-white ml-3" title="Cart"
+							><i class="fas fa-shopping-bag "></i
+						></a>
 					</div>
 				</div>
 			</div>
@@ -83,24 +93,23 @@
 		<!-- hero Section -->
 		<section class="jumbotron jumbotron-fluid hero">
 			<div class="container text-center">
-				<h5 class="text-light hero__title mb-2" data-wait="1000"> 
-					Welcome to Quinn 
+				<h5 class="text-light hero__title mb-2 mt-n5" data-wait="500">
+					Welcome to Quinn
 				</h5>
-				<h1 class="display-3 font-weight-bold hero__subtitle text-white" data-wait="2000">
+				<h1 class="font-weight-bold hero__subtitle text-white" data-wait="2000">
 					<span class="text-theme">Buy </span>your book
-					<br class="d-none d-lg-block" >
+					<br class="d-block d-lg-block" />
 					<span class="text-theme">from </span>Here
 				</h1>
 				<a
 					href="#"
-					class="btn btn-outline-theme rounded-pill px-md-5 py-md-2 mt-2 btn-hero" data-wait="1500"
+					class="btn btn-outline-theme rounded-pill px-md-5 py-md-2 mt-2 btn-hero"
+					data-wait="1400"
 					>Buy now
 					<i class="fas fa-arrow-right" style="margin-left: 4px;"></i>
 				</a>
 			</div>
 		</section>
-
-
 
 		<!-- about -->
 		<section class="about">
@@ -149,7 +158,11 @@
 				</p>
 
 				<div class="row ">
-					<a href="#" class="col-lg-4 col-md-6 col-sm-6 kategory__item" title="Education">
+					<a
+						href="#"
+						class="col-6 col-lg-4 col-md-6 col-sm-6 kategory__item"
+						title="Education"
+					>
 						<img
 							src="dist/image/best__kategories/education__2.jpg"
 							alt=""
@@ -157,7 +170,7 @@
 						/>
 						<span class="catg__label">Education</span>
 					</a>
-					<a href="#" class="col-lg-5 col-md-6 col-sm-6  kategory__item">
+					<a href="#" class="col-6 col-lg-5 col-md-6 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/science.jpg"
 							alt=""
@@ -165,7 +178,7 @@
 						/>
 						<span class="catg__label">science</span>
 					</a>
-					<a href="#" class="col-lg-3 col-md-3 col-sm-6  kategory__item">
+					<a href="#" class="col-6 col-lg-3 col-md-3 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/businnes.jpg"
 							alt=""
@@ -173,7 +186,7 @@
 						/>
 						<span class="catg__label">businnes</span>
 					</a>
-					<a href="#" class="col-lg-5 col-md-6 col-sm-6  kategory__item">
+					<a href="#" class="col-6 col-lg-5 col-md-6 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/technology.jpg"
 							alt=""
@@ -181,7 +194,7 @@
 						/>
 						<span class="catg__label">Technology</span>
 					</a>
-					<a href="#" class="col-lg-2 col-md-3 col-sm-6  kategory__item">
+					<a href="#" class="col-6 col-lg-2 col-md-3 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/romance.jpg"
 							alt=""
@@ -189,7 +202,7 @@
 						/>
 						<span class="catg__label">Romance</span>
 					</a>
-					<a href="#" class="col-lg-5 col-md-12 col-sm-6  kategory__item">
+					<a href="#" class="col-6 col-lg-5 col-md-12 col-sm-6  kategory__item">
 						<img
 							src="dist/image/best__kategories/children.jpg"
 							alt=""
@@ -197,6 +210,28 @@
 						/>
 						<span class="catg__label">Children</span>
 					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- end of best kategory -->
+
+		<!-- ourservice -->
+
+		<section class="service">
+			<div class="container text-center">
+				<h4 class="section__title mb-4">
+					<span class="text-theme">Our </span>
+					Service
+				</h4>
+				<p class="col-md-8 col-sm-12 mx-auto mb-5 mt-3">
+					There are many variations of passages of Lorem Ipsum available, but
+					the majority have suffered lebmid alteration in some ledmid form
+				</p>
+				<div class="row">
+					<div class="col-6">
+						<div class="card"></div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -260,7 +295,12 @@
 				<div class="row">
 					<div class="col-md-8 col-center m-auto text-center">
 						<h2 class="section__title">Testimonial</h2>
-						<div id="myCarousel" class="carousel slide" data-ride="carousel" data-wait="400">
+						<div
+							id="myCarousel"
+							class="carousel slide"
+							data-ride="carousel"
+							data-wait="400"
+						>
 							<!-- Carousel indicators -->
 							<ol class="carousel-indicators">
 								<li
@@ -340,16 +380,12 @@
 			</div>
 		</section>
 
-
-
 		<!-- End of Testimonial -->
 
 		<!-- button scroll top -->
 		<a href="#body" class="btn-scrool__top rounded-circle hide">
-			<i class="fas fa-chevron-up fa-2x" ></i>
+			<i class="fas fa-chevron-up fa-2x"></i>
 		</a>
-
-		
 
 		<!-- footter -->
 
@@ -391,20 +427,20 @@
 				</div>
 				<hr class="bg-white w-100" />
 				<div class="row my-auto">
-					<div class="col-sm-7">
+					<div class="col-lg-7 text-center text-lg-left">
 						<h6 class="mt-3">
 							<a href="" class="text-theme mr-2">MUHAMMAD AKBAR. </a> © 2020 All
 							Rights Reserved.
 						</h6>
 					</div>
-					<div class="col-sm-5 text-right p-0 footer__icons">
-						<a href="" class="footer__icon btn-instagram text-white-50" >
+					<div class="col-lg-5 text-center text-lg-right p-0 footer__icons">
+						<a href="" class="footer__icon btn-instagram text-white-50">
 							<i class="fab fa-instagram fa-2x"></i>
 						</a>
-						<a href="" class="footer__icon btn-facebook text-white-50" >
+						<a href="" class="footer__icon btn-facebook text-white-50">
 							<i class="fab fa-facebook-f fa-2x"></i>
 						</a>
-						<a href="" class="footer__icon btn-twitter text-white-50" >
+						<a href="" class="footer__icon btn-twitter text-white-50">
 							<i class="fab fa-twitter fa-2x"></i>
 						</a>
 						<a href="" class="footer__icon btn-linkedin text-white-50">
@@ -412,7 +448,7 @@
 						</a>
 					</div>
 				</div>
-			</i>
+			</div>
 		</footer>
 
 		<!-- Modal -->
@@ -424,7 +460,7 @@
 			aria-labelledby="newBookModalLabel"
 			aria-hidden="true"
 		>
-			<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-dialog modal-lg " role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button

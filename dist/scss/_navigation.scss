@@ -3,6 +3,58 @@
 	background: none;
 	transition: 0.4s ease-out, 1.2s opacity;
 	margin-top: 0.45rem;
+
+	&-toggler {
+		color: $white !important;
+		background: none;
+		border: none;
+		padding: 5px;
+		margin-right: 5px;
+		outline: none;
+
+		&-burger {
+			cursor: pointer;
+			background-color: $theme;
+			width: 2.3rem;
+			height: 0.2rem;
+			transition: all 0.3s ease-in-out;
+			display: flex;
+			justify-content: flex-end;
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 2.3rem !important;
+				height: 0.2rem !important;
+				background-color: $theme;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+				transition: all 0.3s ease-in-out;
+			}
+
+			&::before {
+				transform: translateY(-10px);
+			}
+
+			&::after {
+				transform: translateY(10px);
+			}
+		}
+		&.open &-burger {
+			transform: translateX(-50px);
+			background: transparent !important;
+			box-shadow: none;
+		}
+
+		&.open &-burger::before {
+			width: 30px;
+			transform: rotate(45deg) translate(35px, -35px);
+		}
+
+		&.open &-burger::after {
+			transform: rotate(-45deg) translate(35px, 35px);
+		}
+	}
+
 	.container {
 		.collapse__theme {
 			.navbar-nav {

@@ -32,7 +32,7 @@ function loadBooks(books) {
 
 function showbooks({ images, title, price, id, rating }) {
 	return `
-		<div class="col-sm-6 col-md-6 col-lg-3 mb-sm-3">
+		<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-sm-3">
 			<div class="card card-book position-relative p-0">
 				<img src="${images}" class="card-img-top shadow rounded-top" />
 				<div class="card-body text-center">
@@ -44,9 +44,9 @@ function showbooks({ images, title, price, id, rating }) {
 							Rp.${price}
 						</div>
 					</div>
-					<div class="card-body__actions">
+					<div class="card-body__actions mt-md-3">
 						<div class="icon__actions">
-							<a class="actions__item " href="#"
+							<a class="actions__item" href="#"
 								><small class="small">Add to cart</small> <i class="fas fa-plus fa-fw"></i>
 							</a>
 							<a
@@ -54,7 +54,7 @@ function showbooks({ images, title, price, id, rating }) {
 								class=" btn-detail-books actions__item"
 								data-id="${id}"
 								data-toggle="modal"
-								data-target="#newBookModal"
+								data-target="#newBookModal "
 							>
 							<small class="small">Detail</small> 
 						
@@ -99,10 +99,10 @@ function showBookDetails(book) {
 		<div class="container py-5">
 			<div class="card main-modal-book border-0">
 				<div class="row p-0">
-					<div class="col-md-5 p-0 pr-4 pl-3">
-						<img src="${book.images}"  class="card-img shadow-lg" />
+					<div class="col-lg-5 p-0 pr-4 pl-3">
+						<img src="${book.images}"  class="card-img shadow-sm ml-md-auto" />
 					</div>
-					<div class="col-md-7 pl-md-5 poppins mt-5 mt-md-0 text-left text-md-left modal-book-content">
+					<div class="col-lg-7 pl-md-5 poppins mt-5 text-left text-md-left modal-book-content">
 						<h4 class="font-weight-bold mt-3">${book.title}</h4>
 						<div class="actions__rating mt-2 mt-lg-3 text-theme">
 							${book.rating}
@@ -250,6 +250,20 @@ function windowsScrollTop() {
 				this.document.querySelectorAll('.footer__icon'),
 				'landing'
 			);
+		}
+	});
+
+	const navbarToggler = document.querySelector('.navbar-toggler');
+
+	// burger menu
+	let menuOpen = false;
+	navbarToggler.addEventListener('click', () => {
+		if (!menuOpen) {
+			navbarToggler.classList.add('open');
+			menuOpen = true;
+		} else {
+			navbarToggler.classList.remove('open');
+			menuOpen = false;
 		}
 	});
 }

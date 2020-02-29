@@ -1,0 +1,430 @@
+@include media-xs {
+	.section__title {
+		position: relative;
+		font-weight: bold !important;
+		font-size: 2rem !important;
+		text-transform: uppercase;
+		margin: 1rem 0;
+
+		&::after {
+			content: '';
+			width: 30%;
+			position: absolute;
+			margin: 0 auto;
+			height: 3px;
+			background: $theme;
+			left: 0;
+			right: 0;
+			bottom: -9px;
+		}
+	}
+
+	.navbar {
+		.container {
+			.collapse__theme {
+				background-color: #343a40;
+				color: $theme !important;
+				text-align: center;
+
+				.nav-item > .nav-link {
+					color: $theme;
+
+					&.nav-link__theme {
+						&::before {
+							content: '';
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.hero {
+		&__subtitle {
+			font-size: 2.9rem;
+		}
+	}
+
+	.about {
+		font-size: 0.9rem;
+		.section__title {
+			font-size: 2rem !important;
+
+			&::after {
+				content: '';
+				width: 20%;
+				position: absolute;
+				margin: 0 auto;
+				height: 3px;
+				background: $theme;
+				left: 0;
+				right: 0;
+				bottom: -9px;
+			}
+		}
+
+		&__content__text {
+			color: blue;
+		}
+	}
+
+	.category {
+		padding-bottom: 1rem;
+		.container {
+			object-fit: cover;
+
+			p {
+				font-size: 1rem;
+			}
+
+			.row > .kategory__item {
+				height: 160px;
+			}
+		}
+	}
+
+	.new__products {
+		margin-bottom: 3rem;
+		.section__title {
+			margin-top: 5rem;
+		}
+
+		.books__row {
+			margin: 2rem 0 !important ;
+
+			.card-book {
+				margin-top: 2rem;
+				.card-body {
+					height: max-content;
+					.card-title {
+						font-size: 1rem;
+						color: $text-color !important;
+					}
+					.card-text > .current__price {
+						font-size: 0.8rem;
+						margin-bottom: 2rem;
+					}
+					&__actions {
+						overflow: hidden;
+						padding-bottom: 2px;
+						.icon__actions {
+							font-size: 1.2rem;
+							display: grid;
+							grid-template-columns: auto;
+
+							.actions__item {
+								margin-top: 2px;
+								font-size: 1rem;
+								width: 100% !important;
+							}
+						}
+					}
+				}
+
+				img {
+					// position: absolute;
+					cursor: pointer;
+					height: 250px;
+					padding: 0 !important;
+					position: relative;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	.btn-scrool__top {
+		position: fixed;
+		z-index: 1500;
+		bottom: 1rem;
+		right: 1rem;
+		background-color: $theme;
+		color: $white;
+		padding: 0.25rem 0.45rem;
+		text-decoration: none;
+		transition: all 0.3s ease-in-out;
+		font-size: 0.95rem;
+
+		&.hide {
+			transform: scale(0) translateY(-5rem);
+		}
+
+		&:hover {
+			background-color: $theme-unhover;
+			color: $white;
+		}
+	}
+
+	.newsletter__form {
+		width: 80% !important;
+		.costum__form {
+			margin-top: 20px;
+			padding: 15px 10px;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			border-bottom: 2px solid rgb(107, 107, 107);
+			font-size: 1rem;
+
+			.form__input {
+				background: none;
+				outline: none;
+				border: none;
+				color: $white;
+				width: 100%;
+			}
+
+			.btn__subs {
+				background: none;
+				border: none;
+				color: $theme;
+				font-weight: bold;
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.footer {
+		min-height: max-content;
+		padding: 4rem 1.5rem 2rem 1.5rem;
+		background-color: rgb(17, 17, 17) !important;
+		color: $white;
+
+		h3 {
+			font-size: 1.5rem !important;
+		}
+
+		h6 {
+			font-size: 1rem;
+		}
+
+		p {
+			font-size: 0.85rem;
+		}
+	}
+
+	.main-modal-book {
+		.row {
+			div > .card-img {
+				width: 15rem !important;
+				height: 20rem;
+				object-fit: cover;
+				object-position: center;
+				margin-left: 5rem;
+			}
+		}
+	}
+}
+
+//////////////////
+
+@include media-sm {
+	.section__title {
+		position: relative;
+		font-weight: bold !important;
+		font-size: 2.5rem !important;
+		text-transform: uppercase;
+		margin: 1rem 0;
+
+		&::after {
+			content: '';
+			width: 30%;
+			position: absolute;
+			margin: 0 auto;
+			height: 3px;
+			background: $theme;
+			left: 0;
+			right: 0;
+			bottom: -9px;
+		}
+	}
+
+	.navbar {
+		.container {
+			.collapse__theme {
+				background-color: #343a40;
+				color: $theme !important;
+				text-align: center;
+
+				.nav-item > .nav-link {
+					color: $theme;
+
+					&.nav-link__theme {
+						&::before {
+							content: '';
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.btn-scrool__top {
+		position: fixed;
+		z-index: 1500;
+		bottom: 1rem;
+		right: 1rem;
+		background-color: $theme;
+		color: $white;
+		padding: 0.25rem 0.45rem;
+		text-decoration: none;
+		transition: all 0.3s ease-in-out;
+		font-size: 0.95rem;
+
+		&.hide {
+			transform: scale(0) translateY(-5rem);
+		}
+
+		&:hover {
+			background-color: $theme-unhover;
+			color: $white;
+		}
+	}
+
+	.hero {
+		&__subtitle {
+			font-size: 3.5rem;
+		}
+	}
+
+	.newsletter__form {
+		width: 70% !important;
+	}
+
+	.main-modal-book {
+		.row {
+			div > .card-img {
+				width: 15rem !important;
+				height: 20rem;
+				object-fit: cover;
+				object-position: center;
+				margin-left: 5rem;
+			}
+		}
+	}
+}
+
+////////////////////////////////
+
+@include media-md {
+	.navbar {
+		.container {
+			.collapse__theme {
+				background-color: #343a40;
+				color: $theme !important;
+				text-align: center;
+
+				.nav-item > .nav-link {
+					color: $theme;
+
+					&.nav-link__theme {
+						&::before {
+							content: '';
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.new__products {
+		margin-bottom: 5rem;
+		.section__title {
+			margin-top: 7rem;
+		}
+
+		.books__row {
+			margin: 4rem 0 !important ;
+
+			.card-book {
+				margin-top: 3rem;
+				.card-title {
+					margin-top: 1.2rem;
+					font-size: 1.5rem;
+					color: $text-color !important;
+				}
+				.card-text > .current__price {
+					font-size: 1.2rem;
+					margin-bottom: 2.3rem;
+				}
+
+				&__actions {
+					transform: translateY(40px);
+					color: $theme;
+					width: 100%;
+					position: absolute;
+					top: 0.7rem;
+					left: 0;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					opacity: 0;
+					transition: all 0.1s ease-in-out;
+
+					.icon__actions {
+						width: 100%;
+						margin: 0 auto;
+						position: relative;
+						font-size: 1.2rem;
+						display: grid;
+						grid-template-columns: auto auto;
+						.actions__item {
+							color: $theme;
+							transition: all 0.3s ease-in-out;
+							transform: translateY(20px);
+							opacity: 0;
+							margin-left: 7px;
+							font-size: 1rem;
+							display: inline-block;
+							padding: 4px 10px;
+							text-decoration: none;
+							i {
+								z-index: -1;
+							}
+
+							&:hover {
+								background-color: $theme;
+								color: $white;
+								transition: 0.15s;
+								transition-delay: unset;
+							}
+						}
+					}
+					.actions__rating {
+						margin-top: 1rem;
+					}
+				}
+
+				img {
+					// position: absolute;
+					cursor: pointer;
+					height: 370px;
+					padding: 0 !important;
+					position: relative;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	.newsletter__form {
+		width: 70% !important;
+	}
+
+	.main-modal-book {
+		.row {
+			div > .card-img {
+				width: 15rem !important;
+				height: 20rem;
+				object-fit: cover;
+				object-position: center;
+				margin-left: 5rem !important;
+			}
+		}
+	}
+}
