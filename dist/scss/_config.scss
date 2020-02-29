@@ -51,7 +51,7 @@ $poppins: 'Poppins', sans-serif;
 }
 
 @mixin media-lg {
-	@media (min-width: 992px) and (max-width: 1199.98px) {
+	@media (min-width: 992px) and (max-width: 1699.98px) {
 		@content;
 	}
 }

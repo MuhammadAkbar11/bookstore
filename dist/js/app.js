@@ -268,4 +268,17 @@ function windowsScrollTop() {
 	});
 }
 
+const navSearch = [...document.querySelectorAll('.nav__search')];
+navSearch.map(nav => {
+	nav.addEventListener('click', nav => {
+		nav.preventDefault();
+		new AddClassElement(document.querySelector('.modal__search'), 'show');
+	});
+});
+
+document.querySelector('.modal__search-close').addEventListener('click', e => {
+	e.preventDefault();
+	document.querySelector('.modal__search').classList.remove('show');
+});
+
 document.addEventListener('DOMContentLoaded', landingElements);

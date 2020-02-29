@@ -35,7 +35,9 @@
 				<div
 					class="col-auto d-flex d-lg-none justify-content-between align-items-center ml-auto mr-2 "
 				>
-					<a href="" class="btn text-white"><i class="fas fa-search"></i></a>
+					<a href="" class="btn text-white  nav__search"
+						><i class="fas fa-search"></i
+					></a>
 					<a href="" class="btn text-white ml-2"
 						><i class="fas fa-shopping-bag"></i
 					></a>
@@ -79,7 +81,7 @@
 						</li>
 					</ul>
 					<div class="d-none d-lg-inline-flex ml-auto">
-						<a href="" class="btn  my-2 my-sm-0  text-white">
+						<a href="" class="btn nav__search my-2 my-sm-0  text-white">
 							Search
 						</a>
 						<a href="#" class="btn  text-white ml-3" title="Cart"
@@ -473,6 +475,38 @@
 						</button>
 					</div>
 					<div class="modal-body pt-0"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal__search">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 text-right pt-3">
+						<a href="" class="mr-2 modal__search-close">
+							<i class="fas fa-times text-theme"></i>
+						</a>
+					</div>
+				</div>
+				<div class="row text-theme modal__search-main">
+					<div class="col-12 modal__search-content mt-5">
+						<form
+							action=""
+							method="post"
+							class="col-12 col-md-8 modal__search-form"
+						>
+							<div class="form-group ">
+								<input
+									type="text"
+									class=" rounded-0 bg-transparent modal__search-input"
+									placeholder="Search your book here...."
+								/>
+								<a href="" class="border-0 text-decoration-none text-theme"
+									><i class="fas fa-search "></i
+								></a>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
