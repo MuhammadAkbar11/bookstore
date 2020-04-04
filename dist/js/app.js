@@ -34,7 +34,7 @@ function showbooks({ images, title, price, id, rating }) {
 	return `
 		<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-sm-3">
 			<div class="card card-book position-relative p-0">
-				<img src="dist/image/books/${images}" class="card-img-top shadow rounded-top" />
+				<img src="dist/image/book/${images}" class="card-img-top shadow rounded-top" />
 				<div class="card-body text-center">
 					<h5 class="card-title text-dark">${title}</h5>
 					<div class="card-text col-12 d-flex ">
@@ -102,7 +102,7 @@ function showBookDetails(book) {
 			<div class="card main-modal-book border-0">
 				<div class="row p-0">
 					<div class="col-lg-5 p-0 pr-4 pl-3">
-						<img src="dist/image/books/${book.images}"  class="card-img shadow-sm ml-md-auto" />
+						<img src="dist/image/book/${book.images}"  class="card-img shadow-sm ml-md-auto" />
 					</div>
 					<div class="col-lg-7 pl-md-5 poppins mt-5 text-left text-md-left modal-book-content">
 						<h4 class="font-weight-bold mt-3">${book.title}</h4>
