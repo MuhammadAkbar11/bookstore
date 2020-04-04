@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
 	try {
 		const books = await getBooks();
 		loadBooks(books);
@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 function getBooks() {
 	return fetch('./newbooks.json')
-		.then(res => {
+		.then((res) => {
 			if (!res.ok) {
 				throw res.statusText;
 			}
 			return res.json();
 		})
-		.then(res => {
+		.then((res) => {
 			if (res.Response === 'False') {
 				throw res.Error;
 			}
@@ -25,7 +25,7 @@ function getBooks() {
 
 function loadBooks(books) {
 	let rows = '';
-	books.forEach(b => (rows += showbooks(b)));
+	books.forEach((b) => (rows += showbooks(b)));
 	const bookRows = document.querySelector('.books__row');
 	bookRows.innerHTML = rows;
 }
@@ -34,7 +34,7 @@ function showbooks({ images, title, price, id, rating }) {
 	return `
 		<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-sm-3">
 			<div class="card card-book position-relative p-0">
-				<img src="${images}" class="card-img-top shadow rounded-top" />
+				<img src="dist/image/books/${images}" class="card-img-top shadow rounded-top" />
 				<div class="card-body text-center">
 					<h5 class="card-title text-dark">${title}</h5>
 					<div class="card-text col-12 d-flex ">
@@ -54,7 +54,7 @@ function showbooks({ images, title, price, id, rating }) {
 								class=" btn-detail-books actions__item"
 								data-id="${id}"
 								data-toggle="modal"
-								data-target="#newBookModal "
+								data-target="#newBookModal"
 							>
 							<small class="small">Detail</small> 
 						
@@ -70,8 +70,9 @@ function showbooks({ images, title, price, id, rating }) {
 	`;
 }
 
-document.addEventListener('click', async function(e) {
-	if (e.target.classList.contains('btn-detail-books')) {
+document.addEventListener('click', async function (e) {
+	const buttonCard = e.target.classList.contains('btn-detail-books');
+	if (buttonCard) {
 		e.preventDefault();
 		try {
 			const id = e.target.dataset.id;
@@ -84,14 +85,15 @@ document.addEventListener('click', async function(e) {
 });
 
 function detailBooks(books, id) {
-	books.filter(book => {
-		if (book.id == id) {
-			const bookdetail = showBookDetails(book);
+	books
+		.filter((books) => {
+			return books.id == id;
+		})
+		.map((book) => {
+			const bookDetail = showBookDetails(book);
 			const modalDetail = document.querySelector('.modal-body');
-			modalDetail.innerHTML = bookdetail;
-		}
-		return false;
-	});
+			modalDetail.innerHTML = bookDetail;
+		});
 }
 
 function showBookDetails(book) {
@@ -100,7 +102,7 @@ function showBookDetails(book) {
 			<div class="card main-modal-book border-0">
 				<div class="row p-0">
 					<div class="col-lg-5 p-0 pr-4 pl-3">
-						<img src="${book.images}"  class="card-img shadow-sm ml-md-auto" />
+						<img src="dist/image/books/${book.images}"  class="card-img shadow-sm ml-md-auto" />
 					</div>
 					<div class="col-lg-7 pl-md-5 poppins mt-5 text-left text-md-left modal-book-content">
 						<h4 class="font-weight-bold mt-3">${book.title}</h4>
@@ -138,12 +140,12 @@ function showBookDetails(book) {
 	`;
 }
 
-document.querySelector('.btn-scrool__top').addEventListener('click', e => {
+document.querySelector('.btn-scrool__top').addEventListener('click', (e) => {
 	e.preventDefault();
 	window.scrollTo({
 		top: 0,
 		left: 100,
-		behavior: 'smooth'
+		behavior: 'smooth',
 	});
 });
 
@@ -161,14 +163,14 @@ function heroTitleAnimation() {
 	}, 1500);
 }
 
-const AddClassElement = function(element, newClass) {
+const AddClassElement = function (element, newClass) {
 	this.element = element;
 	this.newClass = newClass;
 	this.dataWait = 150;
 	this.landing();
 };
 
-AddClassElement.prototype.landing = function() {
+AddClassElement.prototype.landing = function () {
 	if (this.element instanceof NodeList) {
 		element = [...this.element];
 		element.map((e, v) => {
@@ -193,12 +195,11 @@ function landingElements() {
 	new AddClassElement(heroTitle, 'landing');
 	new AddClassElement(heroSubTitle, 'landing');
 	new AddClassElement(btnHero, 'btn--hero-landing');
-
 	windowsScrollTop();
 }
 
 function windowsScrollTop() {
-	window.addEventListener('scroll', function(e) {
+	window.addEventListener('scroll', function (e) {
 		const navbar = this.document.querySelector('.navbar');
 		const category = this.document.querySelector('.category');
 		const newProducts = this.document.querySelector('.new__products');
@@ -269,16 +270,26 @@ function windowsScrollTop() {
 }
 
 const navSearch = [...document.querySelectorAll('.nav__search')];
-navSearch.map(nav => {
-	nav.addEventListener('click', nav => {
+navSearch.map((nav) => {
+	nav.addEventListener('click', (nav) => {
 		nav.preventDefault();
 		new AddClassElement(document.querySelector('.modal__search'), 'show');
 	});
 });
 
-document.querySelector('.modal__search-close').addEventListener('click', e => {
-	e.preventDefault();
-	document.querySelector('.modal__search').classList.remove('show');
-});
+document
+	.querySelector('.modal__search-close')
+	.addEventListener('click', (e) => {
+		e.preventDefault();
+		document.querySelector('.modal__search').classList.remove('show');
+	});
 
 document.addEventListener('DOMContentLoaded', landingElements);
+
+document.querySelector('.btn-scrool__top').addEventListener('click', (e) => {
+	e.preventDefault();
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
+});
